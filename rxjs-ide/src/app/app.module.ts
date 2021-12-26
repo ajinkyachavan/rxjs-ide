@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { HeaderModule } from './header/header.module';
 import { MaterialModule } from './material.module';
 import { SharedModule } from './shared/shared.module';
+import { SidebarModule } from './sidebar/sidebar.module';
 
 @NgModule({
   declarations: [AppComponent],
@@ -21,6 +22,7 @@ import { SharedModule } from './shared/shared.module';
     // Code modules
     SharedModule,
     HeaderModule,
+    SidebarModule
   ],
   providers: [],
   bootstrap: [AppComponent],
