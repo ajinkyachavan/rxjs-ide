@@ -11,4 +11,5 @@ export interface TreeNode {
   type: string;
   level: number;
   expandable: boolean;
+  // selected: boolean;
 }

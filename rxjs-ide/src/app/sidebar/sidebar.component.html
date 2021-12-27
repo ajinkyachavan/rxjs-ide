@@ -1,27 +1,3 @@
-<mat-toolbar>My App</mat-toolbar>
-<mat-list role="list">
-  <mat-tree [dataSource]="dataSource" [treeControl]="treeControl">
+<mat-toolbar>File Explorer</mat-toolbar>
 
-    <!-- This is the tree node template for leaf nodes -->
-    <mat-tree-node *matTreeNodeDef="let node" matTreeNodePadding>
 
-      <!-- use a disabled button to provide padding for tree leaf -->
-      <mat-list-item>
-        <mat-icon>home</mat-icon> {{node.name}}
-        <button mat-icon-button disabled></button>
-      </mat-list-item>
-    </mat-tree-node>
-
-    <!-- This is the tree node template for expandable nodes -->
-    <mat-tree-node *matTreeNodeDef="let node;when: hasChild" matTreeNodePadding>
-      <mat-list-item>
-        <mat-icon>home</mat-icon> {{node.name}}
-        <button mat-icon-button matTreeNodeToggle [attr.aria-label]="'toggle ' + node.name">
-          <mat-icon class="mat-icon-rtl-mirror">
-            {{treeControl.isExpanded(node) ? 'expand_more' : 'chevron_right'}}
-          </mat-icon>
-        </button>
-      </mat-list-item>
-    </mat-tree-node>
-  </mat-tree>
-</mat-list>
