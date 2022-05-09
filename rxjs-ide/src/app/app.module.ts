@@ -3,10 +3,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HeaderModule } from './header/header.module';
+import { IdeModule } from './ide/ide.module';
+import { SharedModule } from './ide/shared/shared.module';
 import { MaterialModule } from './material.module';
-import { SharedModule } from './shared/shared.module';
-import { SidebarModule } from './sidebar/sidebar.module';
 
 @NgModule({
   declarations: [AppComponent],
@@ -16,13 +15,8 @@ import { SidebarModule } from './sidebar/sidebar.module';
     AppRoutingModule,
     BrowserAnimationsModule,
 
-    // Custom modules
-    MaterialModule,
-
-    // Code modules
-    SharedModule,
-    HeaderModule,
-    SidebarModule
+    // IDE Modules
+    IdeModule
   ],
   providers: [],
   bootstrap: [AppComponent],

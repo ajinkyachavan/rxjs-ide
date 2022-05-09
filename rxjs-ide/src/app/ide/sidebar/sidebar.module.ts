@@ -1,8 +1,7 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { NgModule } from '@angular/core';
+import { MatToolbarModule } from '@angular/material/toolbar';
 import { SidebarComponent } from './sidebar.component';
-import { MaterialModule } from '../material.module';
-import { FormsModule } from '@angular/forms';
 
 
 
@@ -12,9 +11,10 @@ import { FormsModule } from '@angular/forms';
   ],
   imports: [
     CommonModule,
-    MaterialModule,
-    FormsModule
+    MatToolbarModule
   ],
-  exports: [SidebarComponent]
+  exports: [
+    SidebarComponent
+  ]
 })
 export class SidebarModule { }
